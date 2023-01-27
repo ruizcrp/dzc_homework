@@ -1,0 +1,50 @@
+q1:
+--iidfile string
+
+q2:
+3
+
+
+q3:
+select count(1)
+from green_taxi_trips
+where CAST(lpep_dropoff_datetime as DATE) ='2019-01-15' and CAST(lpep_pickup_datetime as DATE) ='2019-01-15'
+
+;
+20530
+
+q4:
+2019-01-15
+select trip_distance, CAST(lpep_pickup_datetime as DATE)
+from green_taxi_trips
+ORDER BY trip_distance DESC
+;
+q5:
+2: 1282, 3: 254
+select count(1)
+from green_taxi_trips
+WHERE CAST(lpep_pickup_datetime as DATE)= '2019-01-01' and passenger_count=3
+
+;
+
+
+q6:
+Long Island City/Queens Plaza
+select doz."Zone",tip_amount
+from green_taxi_trips
+JOIN zones as puz ON green_taxi_trips."PULocationID"=puz."LocationID"
+JOIN zones as doz ON green_taxi_trips."DOLocationID"=doz."LocationID"
+
+where puz."Zone" like 'Astoria'
+ORDER BY tip_amount DESC
+
+;
+select doz."Zone",tip_amount
+from green_taxi_trips
+JOIN zones as puz ON green_taxi_trips."PULocationID"=puz."LocationID"
+JOIN zones as doz ON green_taxi_trips."DOLocationID"=doz."LocationID"
+
+where puz."Zone" like 'Astoria'
+ORDER BY tip_amount DESC
+
+;
