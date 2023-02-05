@@ -1,0 +1,52 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-web-to-gcs'
+###
+name: gh
+description: The main ETL function
+version: c3e6427b495476c969a6fb8de2191c04
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-web-to-gcs
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: daef01ae-6bf9-4042-847f-87f9e4292432
+  _block_document_name: anonymous-b2245617-4177-46fa-89fc-94ddb5c413fa
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/ruizcrp/dzc_homework.git
+  reference: null
+  access_token: null
+  include_git_objects: true
+  _block_document_id: a4670553-0393-423d-82f7-ec22dd6429e8
+  _block_document_name: second
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: etl_web_to_gcs.py:etl_web_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-02-05T09:27:26.659155+00:00'
