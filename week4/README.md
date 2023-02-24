@@ -10,3 +10,6 @@ Q3)
 
 Q4)
 22.9M
+
+My code is on a managed dbt cloud repo:
+git@github.com:dbt-cloud-managed-repositories/dbt-cloud-148568-dbt-week4.git
